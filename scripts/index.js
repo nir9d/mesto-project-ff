@@ -10,9 +10,10 @@ function renderCard({name , link}) {
     return cardElement
 }
 function deleteCard(evt){
-   evt.target.parentElement.remove()
+   evt.target.closest('.places__item').remove()
 }
 initialCards.forEach(function(card){
     const cardElement = renderCard(card)
     placesList.append(cardElement)
 })
+
